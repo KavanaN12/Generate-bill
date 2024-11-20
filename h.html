@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Bill</title>
+    <link href="Groceries.css" rel="stylesheet">
+    <script src="groceries.js"></script>
+</head>
+<body>
+    <form id="purchaseForm">
+        <div id="name">
+        <img src="AMAZON.jpg" id="Akshaylogo">
+        <h2 style="text-align: center;">Akshay Enterprises & Co
+            <br><add style="font-size: 1rem;">
+            Near police station,Ramapura,Hanur,
+            <br>Chamarajanagara Dist,571444</add>
+        </h2>
+        </div>
+    <h1>Grocery Bills</h1>
+    <label for="item">Item:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" id="item" required placeholder="Ex: Santoor Soap">
+    <br>
+    <br>
+    <label for="quantity">Quantity:</label>&nbsp;&nbsp;&nbsp;
+    <input type="number" id="quantity" min="1" required placeholder="4">
+    <br>
+    <br>
+    <label for="code">Item Code:</label>
+    <input type="text" id="code" required placeholder="1101-456">
+    <br>
+    <br>
+    <label for="price">Price:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="number" id="price" required min="0" step="0.01" placeholder="40">
+    <br>
+    <br>
+    <div id="buttondiv"><button type="submit" onclick="addPurchase()">Add Purchase</button></div>
+    
+    <br>
+    <br>
+    <table id="purchaseTable">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Item Code</th>
+                <th>Item Price</th>
+            </tr>
+        </thead>
+        <tbody id="purchaseBody"></tbody>
+    </table>
+    <br>
+    <p class="total" style="font-size: 1.25rem;font-weight: 800;">Total Price Paid:<span id="totalPrice">0.00</span></p>
+</form>
+</body>
+</html>
